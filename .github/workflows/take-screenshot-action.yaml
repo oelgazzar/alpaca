@@ -12,5 +12,5 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "20"
-      - run: npm i -g puppeteer
+      - run: npm install
       - run: npm run take-screenshot
