@@ -9,7 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: touch file.txt
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+      - run: npm install
+      - run: npm start&
+      - run: npm run take-screenshot
       - run: git config --local user.name "oelgazzar"
       - run: git config --local user.email "omelgazzar@gmail.com"
       - run: git add -A
