@@ -20,4 +20,8 @@ jobs:
       - run: git remote set-url origin https://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@github.com/oelgazzar/alpaca.git
       - run: git add -A
       - run: git commit -m "commit message"
-      - run: git push --force -u origin main
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+            github_token: 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
+            branch: main
