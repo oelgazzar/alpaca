@@ -17,6 +17,7 @@ jobs:
       - run: npm run take-screenshot
       - run: git config --global user.name "oelgazzar"
       - run: git config --global user.email "omelgazzar@gmail.com"
+      - run: git remote set-url origin https://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@github.com/oelgazzar/alpaca/.git
       - run: git add -A
       - run: git commit -m "commit message"
       - run: git push
