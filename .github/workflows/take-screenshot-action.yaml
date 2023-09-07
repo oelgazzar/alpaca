@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - run: touch file.txt
       - run: git config --local user.name "oelgazzar"
       - run: git config --local user.email "omelgazzar@gmail.com"
       - run: git commit -a -m "commit message"
