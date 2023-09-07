@@ -14,9 +14,5 @@ jobs:
       - run: git config --local user.email "omelgazzar@gmail.com"
       - run: git add -A
       - run: git commit -m "commit message"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-            github_token: ${{ secrets.SCREENSHOT }}
-            branch: main
-            force_with_lease: true
+      - run: git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/oelgazzar/alpaca
+      - run: git push
